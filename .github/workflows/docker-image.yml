@@ -26,11 +26,11 @@ jobs:
       - name: Build Docker image
         run: |
           echo "Using tag"
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/your_repo_name:22f3002291 .
-          docker tag ${{ secrets.DOCKER_USERNAME }}/your_repo_name:22f3002291 ${{ secrets.DOCKER_USERNAME }}/your_repo_name:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/your_repo_name:happy .
+          docker tag ${{ secrets.DOCKER_USERNAME }}/your_repo_name:happy ${{ secrets.DOCKER_USERNAME }}/your_repo_name:latest
 
       - name: Push Docker image
         run: |
           echo "Pushing image with tag:"
-          docker push ${{ secrets.DOCKER_USERNAME }}/your_repo_name:22f3002291
+          docker push ${{ secrets.DOCKER_USERNAME }}/your_repo_name:happy
           docker push ${{ secrets.DOCKER_USERNAME }}/your_repo_name:latest
